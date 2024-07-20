@@ -133,17 +133,6 @@ porcentagem_campus_menor = (campus_min_kwh['kwh'] / media_kwh) * 100 -100
 porcentagem_campus_menor = (round(porcentagem_campus_menor, 1))
 porcentagem_campus_menor = str(porcentagem_campus_menor) + '%'
 
-#Injeção de CSS para configurar a largura da barra lateral
-st.markdown("""
-    <style>
-    .st-emotion-cache-1itdyc2, .eczjsme18 {
-        width: 250px !important;  
-        flex-shrink: 0 !important; 
-        box-sizing: border-box !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
 #Criando colunas
 col1, col2, col3 = st.columns([2,2,1])
 
