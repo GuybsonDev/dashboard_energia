@@ -1,9 +1,5 @@
 import streamlit as st
 import pandas as pd 
-import numpy as np
-import matplotlib as plt
-import streamlit.components.v1 as components
-import plotly.express as px
 import altair as alt
 from streamlit_tags import st_tags_sidebar
 
@@ -156,8 +152,8 @@ with col3:
     st.subheader('_Dados em kWh_', divider='rainbow')
     st.metric('_Media geral_', value=medias_todas_cidades_kwh, delta= '0.0%')
     st.metric('_Media meses solicitados_', value=media_kwh, delta=media_final_kwh, help='Média geral: '+ medias_todas_cidades_kwh_str )
-    st.metric('Maior consumo: ' + campus_max_kwh['Campus'], value=campus_max_kwh['kwh'], delta=porcentagem_campus_maior)
-    st.metric(f'Menor consumo: ' + campus_min_kwh["Campus"], value=campus_min_kwh['kwh'], delta=porcentagem_campus_menor)
+    st.metric('Maior consumo:' + campus_max_kwh['Campus'], value=campus_max_kwh['kwh'], delta=porcentagem_campus_maior)
+    st.metric('Menor consumo:' + campus_min_kwh['Campus'], value=campus_min_kwh['kwh'], delta=porcentagem_campus_menor)
     
 #Configurando a primeira coluna
 with col1:
