@@ -133,6 +133,11 @@ porcentagem_campus_menor = (campus_min_kwh['kwh'] / media_kwh) * 100 -100
 porcentagem_campus_menor = (round(porcentagem_campus_menor, 1))
 porcentagem_campus_menor = str(porcentagem_campus_menor) + '%'
 
+#Extraindo o nome do campus com maior consumo
+campus_maior_consumo = campus_max_kwh['Campus'].iloc[0, 0]
+#Extraindo o nome do campus com menor consumo
+campus_menor_consumo = campus_min_kwh['Campus'].iloc[0, 0]
+
 #Criando colunas
 col1, col2, col3 = st.columns([2,2,1])
 
@@ -141,8 +146,8 @@ with col3:
     st.subheader('_Dados em kWh_', divider='rainbow')
     st.metric('_Media geral_', value=medias_todas_cidades_kwh, delta= '0.0%')
     st.metric('_Media meses solicitados_', value=media_kwh, delta=media_final_kwh, help='Média geral: '+ medias_todas_cidades_kwh_str )
-    st.metric(f'Maior consumo: {campus_max_kwh[['Campus']]}', value=campus_max_kwh['kwh'], delta=porcentagem_campus_maior)
-    st.metric(f'Menor consumo: {campus_min_kwh[['Campus']]}', value=campus_min_kwh['kwh'], delta=porcentagem_campus_menor)
+    st.metric(f'Maior consumo: {campus_maior_consumo}', value=campus_max_kwh['kwh'], delta=porcentagem_campus_maior)
+    st.metric(f'Menor consumo: {campus_menor_consumo}', value=campus_min_kwh['kwh'], delta=porcentagem_campus_menor)
     
 #Configurando a primeira coluna
 with col1:
