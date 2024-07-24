@@ -20,7 +20,7 @@ with st.sidebar:
     st.divider()
 
     #Selecbox para escolher a cidade que deseja visualizar
-    cidade_selecionada = st.selectbox('Cidade visualizada no G1',['Ituiutaba','Monte Carmelo','Patos de Minas','Uberlândia']) 
+    cidade_selecionada = st.selectbox('Cidade visualizada no G3',['Ituiutaba','Monte Carmelo','Patos de Minas','Uberlândia']) 
 
     #Criando uma Tagbar para escolher os meses de visualização das médias
     meses_selecionados = st_tags_sidebar(
