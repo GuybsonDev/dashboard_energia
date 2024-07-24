@@ -134,9 +134,9 @@ porcentagem_campus_menor = (round(porcentagem_campus_menor, 1))
 porcentagem_campus_menor = str(porcentagem_campus_menor) + '%'
 
 #Extraindo o nome do campus com maior consumo
-campus_maior_consumo = campus_max_kwh['Campus'].iloc[0, 0]
+campus_maior_consumo = campus_max_kwh['Campus']
 #Extraindo o nome do campus com menor consumo
-campus_menor_consumo = campus_min_kwh['Campus'].iloc[0, 0]
+campus_menor_consumo = campus_min_kwh['Campus']
 
 #Criando colunas
 col1, col2, col3 = st.columns([2,2,1])
